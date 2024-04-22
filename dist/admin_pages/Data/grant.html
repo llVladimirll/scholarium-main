@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Financial Grants</title>
+    <style>
+      /* Body and general layout */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+
+      form {
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      /* Title */
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      /* Labels */
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      /* Form inputs */
+      input[type="text"],
+      select,
+      textarea,
+      input[type="date"],
+      input[type="url"],
+      input[type="file"],
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease-in-out;
+      }
+
+      input[type="text"]:focus,
+      select:focus,
+      textarea:focus,
+      input[type="date"]:focus,
+      input[type="url"]:focus,
+      input[type="file"]:focus {
+        outline: none;
+        border-color: #5c9ead;
+      }
+
+      /* Submit button */
+      input[type="submit"] {
+        background-color: #121212;
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #cecece;
+        color: #121212;
+        font-weight: 700;
+      }
+
+      /* Checkboxes */
+      .degree-options label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .degree-options input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .goBack {
+        display: block;
+        width: 20%;
+        margin-top: 20px;
+        padding: 10px 15px;
+        background-color: #121212;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        color: #121212;
+      }
+
+      .goBack:hover {
+        background-color: #cecece;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      action="../../controller/grants.php"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <h1>Financial Grants</h1>
+
+      <!-- Grant Name: Text input -->
+      <label for="grantName">Grant Name:</label>
+      <input type="text" id="grantName" name="grantName" required />
+
+      <!-- Granting Organization: Text input -->
+      <label for="grantingOrg">Granting Organization:</label>
+      <input type="text" id="grantingOrg" name="grantingOrg" required />
+
+      <!-- Description: Text area -->
+      <label for="description">Description:</label>
+      <textarea
+        id="description"
+        name="description"
+        rows="4"
+        required
+      ></textarea>
+
+      <!-- Application Deadline: Date picker or text input -->
+      <label for="appDeadline">Application Deadline:</label>
+      <input type="date" id="appDeadline" name="appDeadline" required />
+
+      <!-- Eligibility Criteria: Text area or checkboxes/radio buttons -->
+      <label for="eligibilityCriteria">Eligibility Criteria:</label>
+      <textarea
+        id="eligibilityCriteria"
+        name="eligibilityCriteria"
+        rows="4"
+        required
+      ></textarea>
+      <!-- Or use checkboxes/radio buttons -->
+
+      <!-- Grant Amount: Text input or dropdown -->
+      <label for="grantAmount">Grant Amount:</label>
+      <input type="text" id="grantAmount" name="grantAmount" required />
+      <!-- Or use dropdown/select options for monetary values -->
+
+      <!-- Notes: Text Area -->
+      <label for="notes">Notes:</label>
+      <textarea id="notes" name="notes" rows="4" required></textarea>
+
+      <!-- Application Link: URL input -->
+      <label for="applicationLink">Application Link:</label>
+      <input type="url" id="applicationLink" name="applicationLink" required />
+
+      <!-- Upload Photo -->
+      <label for="photo">Upload Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" />
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Include necessary scripts if any -->
+    <script src="your-scripts.js"></script>
+  </body>
+</html>

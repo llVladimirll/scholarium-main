@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Raleway";
+    src: url('.assets/fonts/Raleway.ttf');
+}
+
+.underline-gray {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 550;
+    cursor: pointer;
+    color: #121212;
+  }
+
+  .underline-gray::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Sesuaikan dengan ketebalan underline */
+    width: 100%; /* Setel lebar awal menjadi 0 untuk animasi dari kanan */
+    height: 2px; /* Sesuaikan dengan ketebalan underline */
+    background-color: #7D7C7C;
+  }
+
+  .underline-gray::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Sesuaikan dengan ketebalan underline */
+    width: 0; /* Setel lebar awal menjadi 0 untuk animasi dari kanan */
+    height: 2px; /* Sesuaikan dengan ketebalan underline */
+    background-color: #7D7C7C; /* Warna #E9E9E9 sebelum di-hover */
+  }
+
+  /* Tambahkan animasi loading saat di-hover dengan warna #121212 */
+  .underline-gray:hover::after {
+    width: 100%; /* Atur lebar menjadi 100% untuk animasi dari kanan ke kiri */
+    background-color: #121212; /* Warna #121212 saat di-hover */
+    transition: width 0.5s ease-in-out; /* Terapkan animasi lebar */
+  }
+
+  .underline-gray-2 {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 550;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .underline-gray-2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Sesuaikan dengan ketebalan underline */
+    width: 100%; /* Setel lebar awal menjadi 0 untuk animasi dari kanan */
+    height: 2px; /* Sesuaikan dengan ketebalan underline */
+    background-color: #7D7C7C;
+  }
+
+  .underline-gray-2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Sesuaikan dengan ketebalan underline */
+    width: 0; /* Setel lebar awal menjadi 0 untuk animasi dari kanan */
+    height: 2px; /* Sesuaikan dengan ketebalan underline */
+    background-color: #7D7C7C; /* Warna #E9E9E9 sebelum di-hover */
+  }
+
+  /* Tambahkan animasi loading saat di-hover dengan warna #121212 */
+  .underline-gray-2:hover::after {
+    width: 100%; /* Atur lebar menjadi 100% untuk animasi dari kanan ke kiri */
+    background-color: #fff; /* Warna #121212 saat di-hover */
+    transition: width 0.5s ease-in-out; /* Terapkan animasi lebar */
+  }
+  
+  #hiddenDiv {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.1s ease;
+  }
+
+  #hiddenDiv.active {
+    opacity: 1;
+    z-index: 9;
+  }
+
+  /* @keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+.infinite-scroll {
+  white-space: nowrap;
+  overflow: hidden;
+} */
+
+.animation-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.animation-content {
+    display: flex;
+    gap : 8px;
+    width: 200vw; /* Lebar total elemen */
+    animation: scrollAnimation 20s linear infinite;
+    animation-direction: forwards;
+    animation-fill-mode: backwards;
+}
+
+.animation-item {
+    flex: 0 0 auto;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2em;
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100vw); /* Kembali ke elemen pertama */
+    }
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.feedback-entry {
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+

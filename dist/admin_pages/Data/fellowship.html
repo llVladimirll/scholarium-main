@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fellowship Application</title>
+    <style>
+      /* Body and general layout */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+
+      form {
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      /* Title */
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      /* Labels */
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      /* Form inputs */
+      input[type="text"],
+      select,
+      textarea,
+      input[type="date"],
+      input[type="url"],
+      input[type="file"],
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease-in-out;
+      }
+
+      input[type="text"]:focus,
+      select:focus,
+      textarea:focus,
+      input[type="date"]:focus,
+      input[type="url"]:focus,
+      input[type="file"]:focus {
+        outline: none;
+        border-color: #5c9ead;
+      }
+
+      /* Submit button */
+      input[type="submit"] {
+        background-color: #121212;
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #cecece;
+        color: #121212;
+        font-weight: 700;
+      }
+
+      /* Checkboxes */
+      .degree-options label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .degree-options input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .goBack {
+        display: block;
+        width: 20%;
+        margin-top: 20px;
+        padding: 10px 15px;
+        background-color: #121212;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        color: #121212;
+      }
+
+      .goBack:hover {
+        background-color: #cecece;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      action="../../controller/fellowshipInput.php"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <h1>Fellowship Application</h1>
+      <button class="goBack">
+        <a href="/pages/fellowship.php">Go back </a>
+      </button>
+
+      <label for="fellowship_name">Fellowship Name:</label>
+      <input type="text" id="fellowship_name" name="fellowship_name" required />
+
+      <label for="organizing_institution">Organizing Institution:</label>
+      <input
+        type="text"
+        id="organizing_institution"
+        name="organizing_institution"
+        required
+      />
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required></textarea>
+
+      <label for="degree">Degree:</label>
+      <div class="degree-options">
+        <label>
+          <input type="checkbox" id="bachelor" name="bachelor" />
+          Bachelor
+        </label>
+        <label>
+          <input type="checkbox" id="master" name="master" />
+          Master
+        </label>
+        <label>
+          <input type="checkbox" id="phd" name="phd" />
+          PhD
+        </label>
+      </div>
+
+      <label for="application_deadline">Application Deadline:</label>
+      <input
+        type="date"
+        id="application_deadline"
+        name="application_deadline"
+        required
+      />
+
+      <label for="duration">Duration:</label>
+      <input type="text" id="duration" name="duration" required />
+
+      <label for="benefits">Benefits:</label>
+      <textarea id="benefits" name="benefits" required></textarea>
+
+      <label for="selection_criteria">Selection Criteria:</label>
+      <textarea
+        id="selection_criteria"
+        name="selection_criteria"
+        required
+      ></textarea>
+
+      <label for="application_process">Application Process:</label>
+      <textarea
+        id="application_process"
+        name="application_process"
+        required
+      ></textarea>
+
+      <label for="eligibility_criteria">Eligibility Criteria:</label>
+      <textarea
+        id="eligibility_criteria"
+        name="eligibility_criteria"
+        required
+      ></textarea>
+
+      <label for="note">Notes:</label>
+      <textarea id="note" name="note" required></textarea>
+
+      <label for="application_link">Application Link:</label>
+      <input
+        type="url"
+        id="application_link"
+        name="application_link"
+        required
+      />
+
+      <label for="photo">Upload Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

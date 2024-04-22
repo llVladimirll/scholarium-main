@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./image/web-logo.png" type="image/png">
+</head>
+<body class="font-Raleway overflow-x-hidden scroll-smooth">
+  <nav
+      class="w-full flex px-8 gap-3 align-middle items-center justify-between relative">
+      <div>
+        <a href="./index.php"><img src="./image/letter-s.png" alt
+            class="w-10"></a>
+      </div>
+      <div class="flex bg-light px-3 rounded-xl w-[87%] sm:w-[50%] align-middle fixed z-50 top-[8px] ml-[54px]">
+        <div class="flex gap-3 rounded-lg w-[87%] mr-2">
+          <img src="./../assets/icon/Searching.svg" alt class="w-5">
+          <input type="search" placeholder="Search Something"
+            class="focus:outline-none bg-light py-3 rounded-sm text-sm w-full">
+        </div>
+        <span class="mt-[10px]  ">
+          <span class="h-full mr-12 border-l-2 border-gray-300"></span>
+        </span>
+        <div class="custom-dropdown" onclick="toggleDropdown(event)">
+          <div class="selected-item">Interchange</div>
+          <ul class="dropdown-list" id="categoryList">
+            <li data-value="scholarship" class="dropdown-item"><a href="./scholarshipPage.php">Scholarship</a></li>
+            <li data-value="fellowship" class="dropdown-item"><a href="./fellowship.html">Fellowship</a></li>
+            <li data-value="grants" class="dropdown-item"><a href="./grants.html">Grants</a></li>
+            <li data-value="volunteer" class="dropdown-item"><a href="./volunteer.html">Volunteer</a></li>
+            <li data-value="event" class="dropdown-item"><a href="./event.html">Event</a></li>
+            <li data-value="competition" class="dropdown-item"><a href="./competition.html">Competition</a></li>
+            <li data-value="cultural-exchange" class="dropdown-item"><a href="./interchange.html">Interchange</a></li>
+            <li data-value="workshop" class="dropdown-item"><a href="./workshop.html">Workshop</a></li>
+            <li data-value="training-center" class="dropdown-item"><a href="./training.html">Training</a></li>
+          </ul>
+        </div> 
+        <img src="./../assets/icon/dropdown.svg" alt="" class="relative left-[3px]">
+      </div>
+      <div class="ml-2 relative">
+        <button id="dropdownButton" class="focus:outline-none">
+          <img src="./image/login-icon.svg" alt class="w-10 mt-3">
+        </button>
+        <!-- Dropdown Menu -->
+        <div id="dropdownMenu" class="hidden absolute right-0 mt-2 bg-night rounded-md shadow-md px-2 py-3">
+          <a href="#"
+            class="block px-4 py-2 text-sm text-white hover:text-light">Profile</a>
+          <a href="#"
+            class="block px-4 py-2 text-sm text-white hover:text-light">Settings</a>
+          <a href="#"
+            class="block px-4 py-2 text-sm text-white hover:text-light">Logout</a>
+        </div>
+        <!-- End Dropdown Menu -->
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!--Hero-Section-->
+    <div>
+        <div class="m-auto w-11/12">
+            <h2 class="md:mt-[12%] mb-[8%] mt-[8%]  text-center font-medium text-night xl:text-4xl text-4xl sm:text-2xl ">
+                Discover inspiration and explore a wealth of<br>opportunities from all over the world.
+            </h2>
+        </div>
+    </div>
+    <!--End-Hero-Section-->
+    
+    <!--Scholarship-Cart-->
+    <div class="flex justify-center relative">
+      <div class="flex gap-6 flex-wrap-reverse justify-center">
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex1.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">AFS Intercultural Programs</h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                AFS Intercultural
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex2.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">Peace Corps</h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                U.S. government
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex3.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">Fulbright Program</h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                U.S. government-sponsored
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex4.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">Rotary International Youth Exchange</h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                Rotary International 
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex5.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">Experiment in International Living</h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                Experiment in International Living
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex6.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">Cultural Youth Exchange </h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                ICYE
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex7.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">Global Citizen Year</h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                Global Citizen Year
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex8.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">World Learning</h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                diverse array of organization
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex9.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">Cultural Vistas</h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                consortium of American
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex10.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">Global UGRAD</h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                he U.S. Department of State's
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex11.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">International Visitor Leadership</h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                U.S. Department of State's Bureau
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+        <!-- Cart -->
+        <div class="w-[380x] h-[300px] relative sm:w-[420px] md:w-[380px] xl:w-[400px]">
+          <img
+            src="./image/ex5.jpg"
+            alt=""
+            class="bg-cover bg-center rounded-[18px] w-[380px] h-[300px] sm:w-[420px] md:w-[380px] xl:w-[400px]"
+          />
+          <div
+            class="w-[372px] h-[70px] bg-white absolute bottom-1 left-1 rounded-[18px] py-4 px-4 sm:w-[412px] md:w-[372px] xl:w-[392px]"
+          >
+            <h1 class="font-semibold text-night uppercase">INTERNATIONAL AUTUMN EXCHANGE</h1>
+            <div class="flex gap-2">
+              <h6 class="font-light text-sm leading-3 text-night">
+                Edutour by studec
+              </h6>
+            </div>
+            <a href="clickinterchange.html" class="absolute bottom-[15px] right-3" id="test" onclick="show()">
+              <img src="../assets/icon/Navigation.svg" alt="" class="w-8"
+            /></a>
+          </div>
+        </div>
+        <!-- End-Cart -->
+      </div>
+    </div>
+    </div>
+    <!--Scholarship-Cart-->
+    <!-- Footer -->
+    <footer class="px-12 mt-6 h-[150px]">
+      <div>
+        <img src="./image/letter-s.png" alt="" class="w-10">
+      </div>
+      <hr class="mt-3">
+      <div class="mt-6 flex justify-between">
+        <ul class="flex gap-4">
+          <li><a href="" class="font-semibold">About Us</a></li>
+          <li><a href="" class="font-semibold">FAQs</a></li>
+          <li><a href="" class="font-semibold">Contact Us</a></li>
+        </ul>
+        <div class="flex gap-3">
+          <p class="font-semibold">Connect with us :</p>
+          <a href="">Instagram</a>
+          <a href="">Telegram</a>
+          <a href="">Youtube</a>
+          <a href="">Facebook</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End-Footer -->
+    <script src="../assets/js/interchange.js"></script>
+</body>
+</html>

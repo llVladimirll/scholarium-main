@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 260px;
+    background: #121212;
+    z-index: 999;
+}
+
+
+.sidebar .logo-details {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.sidebar .logo-details i{
+    font-size: 30px;
+    color: #fff;
+    height: 50px;
+    min-height: 78px;
+    text-align: center;
+    line-height: 50px;
+  
+    /* ----- */
+    padding-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+}
+
+
+.sidebar .logo-details .logo_name{
+font-size: 22px;
+color: #fff;
+font-weight: 600;
+}
+
+.sidebar .nav-links {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+}
+
+.sidebar .nav-links::-webkit-scrollbar{
+    display: none;
+}
+
+.sidebar .nav-links li {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+    
+   
+}
+
+
+.sidebar .nav-links li:hover{
+    background: #333333;
+}
+
+.sidebar .nav-links li i {
+    height: 50px;
+    min-height: 78px;
+    text-align: center;
+    line-height: 50px;
+   
+    /* ----- */
+    padding-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s ease;
+
+}
+
+.sidebar .nav-links li.showMenu i.arrow{
+    transform: rotate(-180deg);
+}
+
+
+.sidebar .nav-links li .icon-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.sidebar .nav-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+   
+}
+
+
+
+
+.sidebar .nav-links li a .link_name{
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+   
+
+}
+
+
+.sidebar .nav-links li .sub-menu{
+    padding: 6px 6px 14px 40px;
+    margin-top: -10px;
+    background: #333333 ;
+    display: none;
+    
+}
+
+.sidebar .nav-links li.showMenu .sub-menu{
+display: block;
+
+}
+
+.sidebar .nav-links li .sub-menu a{
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+
+.sidebar .nav-links li .sub-menu a:hover{
+    opacity: 1;
+}
+
+.sidebar.close .nav-links li .sub-menu{
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.sidebar.close .nav-links li:hover .sub-menu{
+top: 0;
+opacity: 1;
+pointer-events: auto;
+}
+
+.sidebar.close .nav-links li:hover .sub-menu li{
+height: 50px;
+}
+
+
+
+.sidebar .nav-links li .sub-menu .link_name {
+    display: none;
+
+}
+
+.sidebar.close .nav-links li .sub-menu .link_name {
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+
+
+.sidebar.close .nav-links li .sub-menu.blank{
+    opacity: 1;
+    pointer-events: auto;
+    padding: 3px 20px 6px 16px;
+   height: 50px;
+  display: none;
+}
+.sidebar.close .nav-links li:hover .sub-menu.blank{
+top: 50%;
+transform: translateY(-50%);
+
+}
+
+
+.sidebar .profile-details{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   background: #333333;
+    padding: 2px 0;
+    width: 260px;
+    
+}
+
+
+.sidebar .profile-details .profile-content{
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.sidebar .profile-details img{
+    height: 52px ;
+    width: 52px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 0 14px 0 12px;
+    background: #808080;
+    padding: 10px;
+}
+
+.sidebar .profile-details .profile_name, .sidebar .profile-details .job{
+color: #fff;
+font-size: 18px;
+font-weight: 500 ;
+
+}
+
+.sidebar .profile-details .job {
+    font-size: 12px;
+}
+
+.sidebar .profile-details .name-job {
+    margin-left: -20px;
+}
+
+
+.home-section{
+    position: relative;
+    /* background: #CECECE;
+    height: 100%; */
+    left: 260px;
+    width: calc(100% - 260px);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #0077cc;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0077cc;
+}
+
+form {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input[type="submit"] {
+    grid-column: span 2;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    background-color: #005fa3;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    margin-top: 20px;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+#popupContent {
+    background-color: white;
+    padding: 20px;
+}
+
+#popupImage {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style for the edit popup */
+/* Style for the edit popup */
+.editPopUp {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 80%;
+    max-width: 500px;
+    max-height: 70%; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.editPopUp h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: center;
+}
+
+/* Other styles remain the same */
+
+
+.editPopUp label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.editPopUp input[type="text"],
+.editPopUp textarea,
+.editPopUp select,
+.editPopUp input[type="url"],
+.editPopUp input[type="date"],
+.editPopUp input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.editPopUp input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.editPopUp input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.editPopUp .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    background-color: rgb(236, 0, 0);
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 33px;
+}
+
+/* Styling for the button within .home-section */
+.home-section button.addData {
+    background-color: black; /* Set button background color to black */
+    border: none; /* Remove button border */
+    padding: 8px 16px; /* Adjust button padding */
+  }
+  
+  /* Styling for the anchor within .home-section button */
+  .home-section button.addData a {
+    color: white; /* Set anchor text color to white */
+    font-weight: bold; /* Make anchor text bold */
+    text-decoration: none; /* Remove underline from anchor */
+  }
+  

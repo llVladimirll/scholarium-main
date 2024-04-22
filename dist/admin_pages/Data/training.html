@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vocational and Technical Training</title>
+    <!-- Include necessary CSS -->
+    <link rel="stylesheet" href="/CSS/Data/training.css" />
+  </head>
+  <body>
+    <form
+      action="../../controller/training.php"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <h1>Vocational and Technical Training</h1>
+
+      <!-- Training Program Name: Text input -->
+      <label for="programName">Training Program Name:</label>
+      <input type="text" id="programName" name="programName" required />
+
+      <!-- Training Provider/Organization: Text input -->
+      <label for="provider">Training Provider/Organization:</label>
+      <input type="text" id="provider" name="provider" required />
+
+      <!-- Description: Text area -->
+      <label for="description">Description:</label>
+      <textarea
+        id="description"
+        name="description"
+        rows="4"
+        required
+      ></textarea>
+
+      <!-- Duration: Text input or dropdown -->
+      <label for="duration">Duration:</label>
+      <input type="text" id="duration" name="duration" required />
+      <!-- Or use dropdown/select options for weeks/months -->
+
+      <!-- Location: Text input or dropdown -->
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required />
+      <!-- Or use dropdown/select options for city/training center -->
+
+      <!-- Application Deadline: Date picker or text input -->
+      <label for="appDeadline">Application Deadline:</label>
+      <input type="date" id="appDeadline" name="appDeadline" required />
+
+      <!-- Eligibility Criteria: Text area or checkboxes/radio buttons -->
+      <label for="eligibilityCriteria">Eligibility Criteria:</label>
+      <textarea
+        id="eligibilityCriteria"
+        name="eligibilityCriteria"
+        rows="4"
+        required
+      ></textarea>
+      <!-- Or use checkboxes/radio buttons -->
+
+      <!-- Application Link: URL input -->
+      <label for="applicationLink">Application Link:</label>
+      <input type="url" id="applicationLink" name="applicationLink" required />
+
+      <!-- Upload Photo -->
+      <label for="photo">Upload Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" />
+
+      <!-- Submit Button -->
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Include necessary scripts if any -->
+    <script src="your-scripts.js"></script>
+  </body>
+</html>

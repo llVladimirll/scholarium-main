@@ -1,0 +1,19 @@
+{
+  "name": "s-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "flowbite": "^2.2.0",
+    "tailwind": "^4.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.6"
+  }
+}
